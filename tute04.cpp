@@ -66,3 +66,4 @@ long nCr (int n, int r)
 	ncr = factorial / (rf * nf);
 	return ncr;
 }
+

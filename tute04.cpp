@@ -34,36 +34,17 @@ int main ()
   return 0;
 }
 
-long factorial (int no)		//function implemetation
+long nCr (int n, int r)   //function implementation
 {
-	long fact = 1;
-	while (no >= 1)
-	{
-		fact = fact * no;
-		no--; 
-	}
-	return fact;
+  return factorial (n) / (factorial (r) * factorial (n-r));
 }
 
-long nCr (int n, int r)
+long factorial (int no)
 {
-	long ncr;
-  int rf = 1, nf = 1;
-	
-	n = n - 1;
-	while (n >= 1)
-	{
-		nf = nf * n;
-		n--;
-	}
-	
-	while (r >= 1)
-	{
-		rf = rf * r;
-		r--;
-	}
-	
-	ncr = factorial / (rf * nf);
-	return ncr;
+  long fac_n = 1;
+  for (int i = 1; i <= no; i++)
+    {
+      fac_n = fac_n * i;
+    }
+  return fac_n;
 }
-
